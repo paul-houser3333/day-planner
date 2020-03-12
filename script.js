@@ -8,13 +8,12 @@ var storedAppointments;
 var returnedAppointments;
 
 
-//Create time and date linked to my computer
+
 $(window).on("load", function () {
     currentDate = moment().format("dddd MMM Do YYYY, h:mm a");
     $("#currentDay").append(currentDate);
     currentTime = moment().format("H");
 
-    // Store Apts.
     function renderAppointments() {
         storedAppointments = JSON.parse(localStorage.getItem("appointments"));
         if (storedAppointments !== null) {
@@ -29,7 +28,7 @@ $(window).on("load", function () {
             }
         }
     }
-   // Render time of day
+
     renderAppointments();
 
     for (i = 0; i <= 23; i++) {
