@@ -28,8 +28,7 @@ $(window).on("load", function () {
             }
         }
     }
-
-    renderAppointments();
+     renderAppointments();
 
     for (i = 0; i <= 23; i++) {
         CurrentContainer = i;
@@ -47,9 +46,6 @@ $(window).on("load", function () {
         }
     }
 })
-
-
-
 $(".saveBtn").click(function () {
     appointText = $(this).parent('div').children('div').children('textarea').val();
     appointTime = $(this).parent('div').parent().attr("id");
